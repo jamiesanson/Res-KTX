@@ -2,8 +2,8 @@ package nz.jamiesanson.resktx.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import resktx.getString
-import resktx.setContentView
+import android.widget.TextView
+import resktx.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(K.layout.activity_main)
 
-        getString(K.string.abc_action_bar_home_description)
+        findViewById<TextView>(K.id.textView).text = getString(K.string.hello_resktx)
     }
 }

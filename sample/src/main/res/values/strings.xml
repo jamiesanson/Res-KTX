@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Res KTX Sample</string>
+    <string name="hello_resktx">Hello, Res KTX!</string>
 </resources>

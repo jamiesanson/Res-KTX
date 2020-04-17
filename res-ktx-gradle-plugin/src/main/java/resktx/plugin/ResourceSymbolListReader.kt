@@ -1,10 +1,8 @@
 package resktx.plugin
 
-import com.squareup.kotlinpoet.CodeBlock
 import java.io.File
 
 internal class ResourceSymbolListReader(private val builder: KObjectBuilder) {
-    private var idValue = 0
 
     fun readSymbolTable(symbolTable: File) {
         symbolTable.forEachLine { processLine(it) }
@@ -24,7 +22,6 @@ internal class ResourceSymbolListReader(private val builder: KObjectBuilder) {
             return
         }
         val name = values[2]
-        val value = CodeBlock.of("%L", ++idValue)
-        builder.addResourceField(symbolType, name, value)
+        builder.addResourceField(symbolType, name)
     }
 }
