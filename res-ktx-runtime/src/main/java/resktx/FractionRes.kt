@@ -2,4 +2,4 @@ package resktx
 
 import androidx.annotation.FractionRes
 
-inline class FractionRes(@FractionRes val value: Int)
+inline class FractionRes(@FractionRes override val value: Int): AnyRes

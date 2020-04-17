@@ -2,4 +2,4 @@ package resktx
 
 import androidx.annotation.ColorRes
 
-inline class ColorRes(@ColorRes val value: Int)
+inline class ColorRes(@ColorRes override val value: Int): AnyRes

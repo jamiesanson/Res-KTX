@@ -1,10 +1,10 @@
-@file:JvmName("ResKtx_AppCompatActivity")
-@file:Suppress("PackageDirectoryMismatch")
-
-package resktx
+package resktx.extensions.androidx.appcompat.app
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import resktx.IdRes
+import resktx.LayoutRes
+import resktx.StyleRes
 
 fun AppCompatActivity.setContentView(layoutRes: LayoutRes) = setContentView(layoutRes.value)
 

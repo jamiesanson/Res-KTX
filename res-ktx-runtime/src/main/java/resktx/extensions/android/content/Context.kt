@@ -1,12 +1,11 @@
-@file:JvmName("ResKtx_Context")
-@file:Suppress("PackageDirectoryMismatch")
-package resktx
+package resktx.extensions.android.content
 
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.util.AttributeSet
 import androidx.annotation.RequiresApi
+import resktx.*
 
 /**
  * Return a localized, styled CharSequence from the application's package's
