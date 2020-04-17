@@ -1,0 +1,4 @@
+rootProject.name='Res KTX Sample'
+include ':sample'
+include ':res-ktx-gradle-plugin'
+include ':res-ktx-runtime'

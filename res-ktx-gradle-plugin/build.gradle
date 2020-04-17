@@ -1,0 +1,29 @@
+plugins {
+    id 'maven-publish'
+}
+
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'kotlin'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'nz.jamiesanson'
+            artifactId = 'resktx-gradle-plugin'
+            version = '0.1-dev0'
+
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    compileOnly gradleApi()
+
+    implementation deps.android.gradlePlugin
+    implementation deps.kotlinpoet
+    implementation deps.kotlin.stdLibJdk8
+}
